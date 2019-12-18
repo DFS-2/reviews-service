@@ -8,7 +8,7 @@
 enjoy!
 
 # CRUD API
-Create / POST:   /api/reviews/:hostId
-Read / GET:      /api/reviews/:hostId
-Update / PUT:    /api/reviews/:hostId
-Delete / DELETE: /api/reviews/:hostId
+ Create / POST:   "/api/reviews/:hostId"
+ Read / GET:      "/api/reviews/:hostId"
+ Update / PUT:    "/api/reviews/:hostId"
+ Delete / DELETE: "/api/reviews/:hostId"
