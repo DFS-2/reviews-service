@@ -19,6 +19,21 @@ app.get('/api/reviews/:hostId', (req, res) => {
   controller.reviews.get(req, res);
 });
 
+app.post('/api/reviews/:hostId', (req, res) => {
+  console.log('Successful POST Request');
+  res.send('Successful POST Request');
+});
+
+app.put('/api/reviews/:hostId', (req, res) => {
+  console.log('Successful PUT Request');
+  res.send('Successful PUT Request');
+});
+
+app.delete('/api/reviews/:hostId', (req, res) => {
+  console.log('Successful DELETE Request');
+  res.send('Successful DELETE Request');
+});
+
 app.listen(port, () => {
   console.log(`we be arriving at port ${port}`);
 });

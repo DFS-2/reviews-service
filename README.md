@@ -6,3 +6,9 @@
 4. run server with "npm run server:production"
 
 enjoy!
+
+# CRUD API
+Create / POST:   /api/reviews/:hostId
+Read / GET:      /api/reviews/:hostId
+Update / PUT:    /api/reviews/:hostId
+Delete / DELETE: /api/reviews/:hostId
