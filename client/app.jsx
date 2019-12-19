@@ -106,8 +106,8 @@ class ReviewsModule extends React.Component {
   }
 
   renderView() {
-    // let url = 'http://localhost:3004/api/reviews';
-    let url = 'http://52.52.189.97/api/reviews';
+    let url = 'http://localhost:3004/api/reviews';
+    // let url = 'http://52.52.189.97/api/reviews';
     if (window.location.pathname.length > 1) {
       url += window.location.pathname;
     }

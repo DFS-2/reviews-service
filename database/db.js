@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('LemonLoftReviews', 'loftuser', 'password', {
-  host: 'database',
+const sequelize = new Sequelize('LemonLoftReviews', 'root', 'Poncione8!9', {
+  host: 'localhost',
   dialect: 'mysql',
   pool: {
     max: 5,
@@ -127,6 +127,7 @@ module.exports = {
       INNER JOIN users ON users._id = reviews.userId
       WHERE hostId = ${hostIdSQL} ORDER BY reviews.date DESC`)
       .then((data) => {
+        console.log(data);
         callback(null, data);
       })
       .catch((err) => {

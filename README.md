@@ -12,3 +12,7 @@ enjoy!
  Read / GET:      "/api/reviews/:hostId"
  Update / PUT:    "/api/reviews/:hostId"
  Delete / DELETE: "/api/reviews/:hostId"
+
+ # Postgres Database and Table Set-Up
+ run in command line from root directory: 
+ "sudo -u Strider psql -d postgres -f /Users/Strider/hackreactor/reviews-module/database/postModel.sql"
