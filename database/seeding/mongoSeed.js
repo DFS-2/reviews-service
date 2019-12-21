@@ -84,18 +84,18 @@ mongo.connect(url, {
             reviews.insertMany(reviewsArray, (err, result) => {
                 if (err) console.log(err);
                 console.log(new Date() - startTime);
-                if (count === 10) {
+                if (count === 1) {
+                    client.close();
                     return;
                 } else {
                     console.log('reSeed: ', count)
-                    reSeed(start, end, newHostStart + 1, newHostStart + 500000, newRevStart + 1, newRevStart + 1000000);
+                    reSeed(start, end, newHostStart + 1, newHostStart + 100000, newRevStart + 1, newRevStart + 1000000);
                 }
-                // client.close();
             })
         })
         console.log('done');
     }
-    reSeed(1, 11, 1, 500000, 1, 1000000);
+    reSeed(1, 11, 1, 100000, 1, 1000000);
 
 })
 // var start = 1;

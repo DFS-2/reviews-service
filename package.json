@@ -10,7 +10,8 @@
     "server:production": "node ./server/server.js",
     "db:setup": "node server/seed/seed.js",
     "build:production": "webpack --mode=production",
-    "seed:mongo": "node --max-old-space-size=6144 database/mongoSeed.js"
+    "seed:mongo": "node --max-old-space-size=6144 database/seeding/mongoSeed.js",
+    "seed:post": "node --max-old-space-size=6144 database/seeding/postSeed.js"
   },
   "repository": {
     "type": "git",
@@ -52,9 +53,13 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "fast-csv": "^3.6.0",
+    "fs": "0.0.1-security",
     "jquery": "^3.4.1",
+    "json2csv": "^4.5.4",
     "mongodb": "^3.4.0",
     "mysql2": "^2.0.1",
+    "pg": "^7.15.1",
     "pip": "0.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

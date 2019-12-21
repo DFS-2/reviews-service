@@ -7,3 +7,6 @@ coverage
 docker-compose.yml
 
 public/index.js
+database/seeding/hosts.csv
+database/seeding/users.csv
+database/seeding/reviews.csv
