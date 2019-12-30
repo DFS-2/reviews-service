@@ -21,7 +21,7 @@ CREATE TABLE hosts (
 CREATE TABLE reviews (
     reviewId        SERIAL,
     userId          int,
-    date            date,
+    date            varchar(150),
     body            varchar(800),
     rating          smallint,
     cleanliness     smallint,
@@ -37,7 +37,7 @@ CREATE TABLE reviews (
     spaCle          boolean,
     hostId          int,
     hostRes         varchar(800),
-    hostResDate     date,
+    hostResDate     varchar(150),
     PRIMARY KEY     (reviewId)
 );
 
