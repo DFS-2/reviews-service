@@ -20,7 +20,7 @@ CREATE TABLE hosts (
 
 CREATE TABLE reviews (
     reviewId        SERIAL,
-    userId          int,
+    userId          int REFERENCES users(userId),
     date            varchar(150),
     body            varchar(800),
     rating          smallint,
@@ -35,7 +35,7 @@ CREATE TABLE reviews (
     amaAme          boolean,
     stySpa          boolean,
     spaCle          boolean,
-    hostId          int,
+    hostId          int REFERENCES hosts(hostId),
     hostRes         varchar(800),
     hostResDate     varchar(150),
     PRIMARY KEY     (reviewId)

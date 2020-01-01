@@ -1,9 +1,11 @@
 # reviews-module
 
 1. start with "npm install"
-2. seed the data with "npm run db:setup"
-3. bundle using "npm run build:production"
-4. run server with "npm run server:production"
+2. set up database with "npm run db:setup"
+3. create data with "npm run create:csv"
+4. seed database with "npm run seed:post"
+5. bundle using "npm run build:production"
+6. run server with "npm run server:production"
 
 enjoy!
 

@@ -84,7 +84,7 @@ mongo.connect(url, {
             reviews.insertMany(reviewsArray, (err, result) => {
                 if (err) console.log(err);
                 console.log(new Date() - startTime);
-                if (count === 1) {
+                if (count === 5) {
                     client.close();
                     return;
                 } else {

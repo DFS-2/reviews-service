@@ -8,10 +8,11 @@
     "build": "webpack -w -d",
     "server": "nodemon ./server/server.js",
     "server:production": "node ./server/server.js",
-    "db:setup": "node server/seed/seed.js",
+    "db:setup": "sudo -u Strider psql -d postgres -f /Users/Strider/hackreactor/reviews-module/database/postModel.sql",
     "build:production": "webpack --mode=production",
     "seed:mongo": "node --max-old-space-size=6144 database/seeding/mongoSeed.js",
-    "seed:post": "node --max-old-space-size=6144 database/seeding/postSeed.js"
+    "seed:post": "node --max-old-space-size=6144 database/seeding/postSeed.js",
+    "create:csv": "node --max-old-space-size=6144 database/seeding/createReviewCsv.js"
   },
   "repository": {
     "type": "git",

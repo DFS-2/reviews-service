@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const controller = require('./controllers');
+const controller = require('./controllers/postgresController.js');
 
 const port = 3004;
 

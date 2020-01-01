@@ -115,7 +115,8 @@ class ReviewsModule extends React.Component {
       url,
       method: 'GET',
       success: (data) => {
-        const result = data[0];
+        console.log(data);
+        const result = data;
         const length = result.length;
 
         // rating, cleanliness, communication, checkin, accuracy, location, value
@@ -149,7 +150,7 @@ class ReviewsModule extends React.Component {
         }
 
         this.setState({
-          data: data[0],
+          data: data,
           staticData: {
             ratings: ratings.map((x, i) => {
               if (i === 0) {
