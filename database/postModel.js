@@ -4,7 +4,7 @@ const startTime = new Date();
 
 const pool = new Pool({
   user: 'power_user',
-  host: '52.53.208.83',
+  host: '52.9.115.126',
   database: 'reviewmodule',
   password: 'password',
   port: 5432

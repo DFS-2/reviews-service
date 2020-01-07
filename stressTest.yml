@@ -1,5 +1,5 @@
 config:
-  target: 'http://127.0.0.1:3004'
+  target: 'http://54.176.224.38:3004'
   http:
     pool: 10
   phases:
