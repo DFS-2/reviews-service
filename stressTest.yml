@@ -1,0 +1,13 @@
+config:
+  target: 'http://127.0.0.1:3004'
+  http:
+    pool: 10
+  phases:
+    - duration: 60
+      arrivalRate: 30
+scenarios:
+    - flow:
+        - loop:
+            - get:
+                url: "/api/reviews"
+          count: 400

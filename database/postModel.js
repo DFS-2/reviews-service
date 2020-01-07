@@ -3,16 +3,18 @@ const { Pool, Client } = require('pg');
 const startTime = new Date();
 
 const pool = new Pool({
-  user: 'Strider',
-  host: 'localhost',
+  user: 'power_user',
+  host: '52.53.208.83',
   database: 'reviewmodule',
-  password: null,
+  password: 'password',
   port: 5432
 });
 
 module.exports = {
-    getReviews: (hostId, callback) => {
-        const start = new Date();
+    getReviews: (id, callback) => {
+
+        const hostId = id || Math.ceil(Math.random() * 5000000);
+
         pool.query(`SELECT 
                         * 
                     FROM
@@ -25,8 +27,16 @@ module.exports = {
                         reviews.date DESC`)
             .then(res => {
                 callback(null, res.rows);
-                console.log(new Date() - start);
             })
+            .catch(err => callback(err));
+    },
+    insertReview: (review, callback) => {
+        pool.query(`INSERT INTO reviews (userId, date, body, rating, cleanliness, communication, checkin, accuracy, 
+                                         location, value, quiRes, outHos, amaAme, stySpa, spaCle, hostId, hostRes, hostResDate)
+                            VALUES (${review.userId}, ${review.date}, ${review.body}, ${review.rating}, ${review.cleanliness}, ${review.communication},
+                                    ${review.checkin}, ${review.accuracy}, ${review.location}, ${review.value}, ${review.quiRes}, ${review.outHos},
+                                    ${review.amaAme}, ${review.stySpa}, ${review.spaCle}, ${review.hostId}, ${review.hostRes}, ${review.hostResDate})`)
+            .then(res => callback(null, res))
             .catch(err => callback(err));
     }
 };

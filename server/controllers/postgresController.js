@@ -10,5 +10,14 @@ module.exports = {
           }
         });
       },
+      insert: (req, res) => {
+        post.insertReview(req, (err, results) => {
+          if (err) {
+            res.status(400).send(err);
+          } else {
+            res.status(200).send(results);
+          }
+        })
+      }
     },
   };

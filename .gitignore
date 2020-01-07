@@ -5,6 +5,7 @@ coverage
 .eslint.js
 
 docker-compose.yml
+newrelic.js
 
 public/index.js
 database/seeding/hosts.csv
