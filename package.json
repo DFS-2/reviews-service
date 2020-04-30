@@ -56,7 +56,7 @@
     "faker": "^4.1.0",
     "fast-csv": "^3.6.0",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "json2csv": "^4.5.4",
     "mongodb": "^3.4.0",
     "mysql2": "^2.0.1",
